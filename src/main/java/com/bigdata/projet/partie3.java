@@ -7,7 +7,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 
 public class partie3 {
-
+        /* declaration et initialisation des variables i,j,k utilisés dans la boucle for */
 	static int i,j,k=0;
        /* GroupConnex est une generalision de la deuxième partie, elle prend en parametre un dataset et deux strings 
        * pour retourner des fichiers Json de la fusion de chaque triplet de colonnes du dataset.
