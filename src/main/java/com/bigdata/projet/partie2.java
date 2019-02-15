@@ -7,6 +7,7 @@ import org.apache.spark.sql.Row;
 
 public class partie2 {
  
+	/*La fonction fselect permet de selectionner 3 colones du dataset initial*/
 	public static Dataset<Row> fselect (Dataset<Row> ds, String col1, String col2, String col3) {
 	
 		Dataset<Row> selected= ds.select(ds.col(col1),
@@ -15,7 +16,10 @@ public class partie2 {
 		return selected;
 
 	}
-	
+	/*La fonction GroupConnex, prend en parametres 3 colones et un string, elle crée une nouvelle colones appelée
+	* Connex, qui contiendra une pair constitué des deux colonnes col2 et col3
+	* Le resultat de retour est un dataset
+	*/
 	public static Dataset<Row> GroupConnex (Dataset<Row> ds, String col1, String col2, String col3,String Connex) {
 		Dataset<Row> Grouped = ds.withColumn(Connex, concat(ds.col(col2),
 				                 lit(","), ds.col(col3)))
@@ -24,6 +28,8 @@ public class partie2 {
 		return Grouped;
 
 	}
+	/*La fonction ColUnion, utilise la methode Union pour fusioner les deux colones du dataset precedent.
+	*/
 	public static Dataset<Row> ColUnion (Dataset<Row> ds, String col1, String col2, String name) {
 	    Dataset<Row> Union = ds.select(col1)
 				  			 .union(ds.select(col2)).distinct()
