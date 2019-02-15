@@ -14,7 +14,6 @@ public class partie3 {
        */
 	public static void GroupConnex (Dataset<Row> ds,String Connex, String outputdir) {
 		Dataset<Row> Grouped = null;
-		//String outputdir = "V:/Test/output/output_partie3";
 		int max=ds.schema().length();
 		String [] column = ds.columns();
 		System.out.println(ds.col("temps"));
