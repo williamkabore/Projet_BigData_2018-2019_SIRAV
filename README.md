@@ -1,7 +1,7 @@
 #### Auteurs : Aziz BEKKI et William KABORE
 # Projet Big Data 2018-2019-Master : SIRAV
 ## Partie I
-### 1. Lecture du fichier logs.
+##### 1. Lecture du fichier logs.
 ```javascript
 Dataset<Row> ds = partie1.readfile ("auth_500000.txt",spark);
 ```
@@ -17,7 +17,7 @@ La méthode readfile est definie comme suit:
 					     "type de connexion","orientation d'authentification","succès / échec");
 		return dataset;
 ```
-###### 2. Suppression des lignes de logs qui contiennent le symbole ' ?'.
+##### 2. Suppression des lignes de logs qui contiennent le symbole ' ?'.
 ```sh
 +-----+--------------------------+-------------------------------+-----------------+----------------------+---------------------+-----------------+------------------------------+--------------+
 |temps|utilisateur_source@domaine|utilisateur_destination@domaine|ordinateur_source|ordinateur_destination|type d'authentication|type de connexion|orientation d'authentification|succès / échec|
@@ -297,7 +297,7 @@ Le contenu de ces fichiers JSON est le suivant  :
 
 ## Exécution avec spark-submit
 
-Après avoir exporté le JAR de notre application, nous l'avons testé avec spark-submit. Avant, nous avons modifié notre code afin de permettre de spécifier le répertoire output pour les parties 3 et 4. Il faut également spécifier le chemin vers le main. Ainsi la commande pour exécuter notre application est la suivante :
+Après avoir exporté le JAR de notre application, nous l'avons testé avec spark-submit. Avant, nous avons modifié notre code afin de permettre de spécifier le répertoire output pour les parties 3 et 4 (si aucun répertoire n'est spécifié, les données sont sauvegardé dans le répertoire courant). Il faut également spécifier le chemin vers le main() dans l'application. Ainsi la commande pour exécuter notre application est la suivante :
 ```sh
 /bin/spark-submit --class com.bigdata.projet.main application.jar path\output
 ```
