@@ -9,7 +9,9 @@ import org.apache.spark.sql.Row;
 public class partie3 {
 
 	static int i,j,k=0;
-
+       /* GroupConnex est une generalision de la deuxième partie, elle prend en parametre un dataset et deux strings 
+       * pour retourner des fichiers Json de la fusion de chaque triplet de colonnes du dataset.
+       */
 	public static void GroupConnex (Dataset<Row> ds,String Connex, String outputdir) {
 		Dataset<Row> Grouped = null;
 		//String outputdir = "V:/Test/output/output_partie3";
