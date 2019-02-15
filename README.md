@@ -116,49 +116,26 @@ only showing top 10 rows
 +--------------------------+
 |Utilisateurs et connexions|
 +--------------------------+
-|               C2962$@DOM1|
-|               C3608$@DOM1|
-|               C2470$@DOM1|
-|               C4248$@DOM1|
-|               C2645$@DOM1|
-|               C3844$@DOM1|
-|               C1800$@DOM1|
-|               C2641$@DOM1|
-|               C3787$@DOM1|
-|               C3572$@DOM1|
-|               C3232$@DOM1|
-|               C3703$@DOM1|
-|                 C64$@DOM1|
-|               C3542$@DOM1|
-|               C5107$@DOM1|
-|               C1775$@DOM1|
-|                C254$@DOM1|
-|                C990$@DOM1|
-|               C5020$@DOM1|
-|               C1482$@DOM1|
-|                C261$@DOM1|
-|               C4513$@DOM1|
-|               C1210$@DOM1|
-|                U1051@DOM1|
-|                 U150@DOM1|
-|                 U875@DOM1|
-|                U1336@DOM1|
-|               C1485,C2106|
-|                C1069,C528|
-|                C3659,C625|
-|                C2846,C586|
-|                C1215,C529|
-|               C3863,C1065|
-|                 C360,C528|
-|                C617,C1065|
-|                 C234,C625|
-|                 C800,C529|
-|                C410,C2106|
-|               C1455,C1455|
-|                C1352,C457|
-|                C3709,C457|
-|               C2463,C2106|
-|                C4102,C612|
+|                  U48@DOM1|
+|               C1710,C1710|
+|                C529$@DOM1|
+|                  U19@DOM1|
+|                C743$@DOM1|
+|                 C480,C625|
+|                  U53@DOM1|
+|                     C7,C7|
+|                  U34@DOM1|
+|                 C585,C586|
+|                 C529,C529|
+|                C585$@DOM1|
+|                 C743,C586|
+|                C599$@DOM1|
+|                  U94@DOM1|
+|                C480$@DOM1|
+|                 C419,C419|
+|                 C921,C921|
+|                 C229,C229|
+|                C1619,C101|
 +--------------------------+
 ```
 ##### 2. Nombre de d'authentifications (Logon,...) avec ou sans succès (succès / échec) pour chaque utilisateur
@@ -223,55 +200,26 @@ only showing top 10 rows
 +--------------------------+
 |Utilisateurs et connexions|
 +--------------------------+
-|               C4248$@DOM1|
-|               C3608$@DOM1|
-|                C254$@DOM1|
-|               C2645$@DOM1|
-|               C3542$@DOM1|
-|                 C64$@DOM1|
-|               C3572$@DOM1|
-|               C3787$@DOM1|
-|               C3844$@DOM1|
-|               C1210$@DOM1|
-|               C2962$@DOM1|
-|               C3703$@DOM1|
-|               C2470$@DOM1|
-|               C1775$@DOM1|
-|               C2641$@DOM1|
-|               C3232$@DOM1|
-|               C1800$@DOM1|
-|               C1482$@DOM1|
-|               C5107$@DOM1|
-|               C5020$@DOM1|
-|                C990$@DOM1|
-|                C261$@DOM1|
-|                U1051@DOM1|
-|               C4513$@DOM1|
-|                 U934@DOM1|
-|                 U875@DOM1|
-|                U1336@DOM1|
-|                 U150@DOM1|
-|      NETWORK SERVICE@C...|
-|      NETWORK SERVICE@C...|
-|      NETWORK SERVICE@C...|
-|       LOCAL SERVICE@C5538|
+|        C743$@DOM1,Success|
+|                C567$@DOM1|
+|          U22@DOM1,Success|
+|                C743$@DOM1|
+|       C1114$@DOM1,Success|
+|          U66@DOM1,Success|
 |      ANONYMOUS LOGON@C...|
-|       C1837$@DOM1,Success|
-|       C1495$@DOM1,Success|
-|        C272$@DOM1,Success|
-|       C2754$@DOM1,Success|
-|        C910$@DOM1,Success|
-|          C5$@DOM1,Success|
-|         U676@DOM1,Success|
-|          C1$@DOM1,Success|
-|         C69$@DOM1,Success|
-|        C932$@DOM1,Success|
-|       C3595$@DOM1,Success|
-|       C1790$@DOM1,Success|
-|        U1415@DOM1,Success|
-|        U1022@DOM1,Success|
-|         U872@DOM1,Success|
-|        U1268@DOM1,Success|
+|                  U66@DOM1|
+|        C585$@DOM1,Success|
+|                C585$@DOM1|
+|                C104$@DOM1|
+|        C104$@DOM1,Success|
+|                C599$@DOM1|
+|               C1114$@DOM1|
+|        C567$@DOM1,Success|
+|        C599$@DOM1,Success|
+|        C123$@DOM1,Success|
+|                  U22@DOM1|
+|                C123$@DOM1|
+|      ANONYMOUS LOGON@C586|
 +--------------------------+
 ```
 ## Partie III
@@ -352,5 +300,5 @@ Après avoir exporté le JAR de notre application, nous l'avons testé avec spar
 Le résultat est le suivant :
 ![alt text](https://github.com/AzizGS/BigData/blob/master/Capture.PNG)
 
-On peut également observer les détails de l'exécution de notre application sur l'interface web fournit par spark (127.0.0.1:4040) comme sur la capture ci-dessous :
+On peut également observer les détails de l'exécution de notre application sur l'interface web fournie par spark (127.0.0.1:4040) comme sur la capture ci-dessous :
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Spark%20UI.PNG)
