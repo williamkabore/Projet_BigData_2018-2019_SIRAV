@@ -7,7 +7,11 @@ import org.apache.spark.sql.Row;
 
 
 public class partie4 {
-	//static String outputdir = "output_partie4";
+        /*
+	* TempWindow est une fonction qui utilise les fenêtres temporelles, pour filter le dataset
+	* Le resultat est ensuite sauvegardé vers des fichiers JSON.
+	* Le paramètre "outputdir" spécifie le chemin du répertoire de destination
+	*/
 	static int t, i,j,k=0,ft=60;
 
 	public static void TempWindow (Dataset<Row> ds,String Connex, String outputdir) {
@@ -31,6 +35,7 @@ public class partie4 {
 						}
 				}
 			}
+			/*Incrémentation de la fenêtre temporelle  par 60 seconde*/
 			ft+=60;
 		}
 	}
