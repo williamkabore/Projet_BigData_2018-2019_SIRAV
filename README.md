@@ -1,6 +1,5 @@
 #### Auteurs : Aziz BEKKI et William KABORE
-Lien vers le projet [GitHub].
-# Projet Big data 2018-2019-Master : SIRAV
+# Projet Big Data 2018-2019-Master : SIRAV
 ## Partie I
 ### 1. Lecture du fichier logs.
 ```sh
@@ -267,6 +266,4 @@ only showing top 10 rows
 
 ```
 
-
-[GitHub]:<https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV>
 ![alt text](https://github.com/AzizGS/BigData/blob/master/Capture.PNG)
