@@ -336,3 +336,6 @@ Après avoir exporté le JAR de notre application, nous l'avons testé avec spar
 ```
 Le résultat est le suivant :
 ![alt text](https://github.com/AzizGS/BigData/blob/master/Capture.PNG)
+
+On peut également observer les détails de l'exécution de notre application sur l'interface web fournit par spark (127.0.0.1:4040) comme sur la capture ci-dessous :
+![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Spark%20UI.PNG)
