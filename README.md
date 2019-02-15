@@ -5,7 +5,7 @@
 ```javascript
 Dataset<Row> ds = partie1.readfile ("auth_500000.txt",spark);
 ```
-La fonction méthode est definie comme suit:
+La méthode readfile est definie comme suit:
 ```javascript
 	public static Dataset<Row> readfile(String File_name, SparkSession spark) {
 		Dataset<Row> dataset = spark.read()
@@ -223,7 +223,7 @@ only showing top 10 rows
 +--------------------------+
 ```
 ## Partie III
-Pour cette partie, les résultats seront sauvegardés dans des répertoires output :
+Pour cette partie, les résultats seront sauvegardés dans un répertoire outputdir :
 ```javascript
 	public static void GroupConnex (Dataset<Row> ds,String Connex, String outputdir) {
 		Dataset<Row> Grouped = null;
@@ -245,15 +245,15 @@ Pour cette partie, les résultats seront sauvegardés dans des répertoires outp
 		}
 	}
 ```
-Comme on peut le voir sur la capture ci-dessous :
+Comme on peut observer le contenu de ce répertoire sur la capture ci-dessous :
 
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Output.PNG)
 
-A l'intérieur de ces répertoires, nous avons les différents fichiers JSON :
+A l'intérieur de ce répertoire, nous avons les différents fichiers JSON :
 
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/fichiers%20JSON.PNG)
 
-Les résultats contenus dans ces fichiers JSON :
+Le contenu de ces fichiers JSON est le suivant :
 
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Contenu%20JSON.PNG)
 
@@ -288,7 +288,9 @@ Pour cette partie, nous avons également utilisé une méthode qui fait le trait
 
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Output2.PNG)
 
-Les résultats contenus dans ces fichiers JSON :
+
+Le contenu de ces fichiers JSON est le suivant  :
+
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/contenu%20JSON2.PNG)
 
 ## Exécution avec spark-submit
