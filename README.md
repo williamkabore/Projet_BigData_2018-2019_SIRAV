@@ -1,7 +1,7 @@
 #### Auteurs : Aziz BEKKI et William KABORE
 # Projet Big Data 2018-2019-Master : SIRAV
 ## Partie I
-### 1. Lecture du fichier logs.
+##### 1. Lecture du fichier logs.
 ```sh
 Dataset<Row> ds = partie1.readfile ("auth_500000.txt",spark);
 ```
@@ -17,7 +17,7 @@ La méthode readfile est definie comme suit:
 					     "type de connexion","orientation d'authentification","succès / échec");
 		return dataset;
 ```
-###### 2. Suppression des lignes de logs qui contiennent le symbole ' ?'.
+##### 2. Suppression des lignes de logs qui contiennent le symbole ' ?'.
 ```sh
 +-----+--------------------------+-------------------------------+-----------------+----------------------+---------------------+-----------------+------------------------------+--------------+
 |temps|utilisateur_source@domaine|utilisateur_destination@domaine|ordinateur_source|ordinateur_destination|type d'authentication|type de connexion|orientation d'authentification|succès / échec|
