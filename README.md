@@ -1,5 +1,5 @@
 #### Auteurs : Aziz BEKKI et William KABORE
-Notre code est également disponible [GitHub].
+Lien vers le projet [GitHub].
 # Projet Big data 2018-2019-Master : SIRAV
 ## Partie I
 ### 1. Lecture du fichier logs.
