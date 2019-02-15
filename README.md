@@ -5,7 +5,7 @@
 ```sh
 Dataset<Row> ds = partie1.readfile ("auth_500000.txt",spark);
 ```
-La fonction méthode est definie comme suit:
+La méthode readfile est definie comme suit:
 ```sh
 	public static Dataset<Row> readfile(String File_name, SparkSession spark) {
 		Dataset<Row> dataset = spark.read()
