@@ -18,7 +18,7 @@ La fonction méthode est definie comme suit:
 					     "type de connexion","orientation d'authentification","succès / échec");
 		return dataset;
 ```
-### 2. Suppression des lignes de logs qui contiennent le symbole ' ?'.
+###### 2. Suppression des lignes de logs qui contiennent le symbole ' ?'.
 ```sh
 +-----+--------------------------+-------------------------------+-----------------+----------------------+---------------------+-----------------+------------------------------+--------------+
 |temps|utilisateur_source@domaine|utilisateur_destination@domaine|ordinateur_source|ordinateur_destination|type d'authentication|type de connexion|orientation d'authentification|succès / échec|
@@ -56,7 +56,7 @@ La fonction méthode est definie comme suit:
 +-----+--------------------------+-------------------------------+-----------------+----------------------+---------------------+-----------------+------------------------------+--------------+
 ```
 
-### 3. Nombre d'utilisation d'une machine (ordinateur_source) par un utilisateur (utilisateur_source@domaine).
+##### 3. Nombre d'utilisation d'une machine (ordinateur_source) par un utilisateur (utilisateur_source@domaine).
 ```sh
 +-----------------------------------------------+-----+
 |(utilisateur_source@domaine, ordinateur_source)|count|
@@ -73,7 +73,7 @@ La fonction méthode est definie comme suit:
 |                           C2279$@DOM1,   C2280|  158|
 +-----------------------------------------------+-----+
 ```
-### 4. Affichage du top 10 des accès les plus fréquents.
+##### 4. Affichage du top 10 des accès les plus fréquents.
 ```sh
 +-----------------------------------------------+-----+
 |(utilisateur_source@domaine, ordinateur_source)|count|
@@ -93,8 +93,8 @@ only showing top 10 rows
 ```
 
 ## Partie II
-### 1. Nombre de connexions effectuées sur une machine source (ordinateur_source) vers une machine destination (ordinateur_destination) pour chaque utilisateur (utilisateur_source@domaine).
-#### a. Sauvegarde du résultat dans une DataFrame
+##### 1. Nombre de connexions effectuées sur une machine source (ordinateur_source) vers une machine destination (ordinateur_destination) pour chaque utilisateur (utilisateur_source@domaine).
+###### a. Sauvegarde du résultat dans une DataFrame
 ```sh
 +--------------------------+-----------+-----+
 |                C585$@DOM1|  C585,C586| 3376|
@@ -110,7 +110,7 @@ only showing top 10 rows
 +--------------------------+-----------+-----+
 only showing top 10 rows
 ```
-#### b. Dataframe contenant les utilisateurs (utilisateur_source@domaine) et les pairs (ordinateur_source, ordinateur_destination)
+###### b. Dataframe contenant les utilisateurs (utilisateur_source@domaine) et les pairs (ordinateur_source, ordinateur_destination)
 ```sh
 +--------------------------+
 |Utilisateurs et connexions|
@@ -160,8 +160,8 @@ only showing top 10 rows
 |                C4102,C612|
 +--------------------------+
 ```
-### 2. Nombre de d'authentifications (Logon,...) avec ou sans succès (succès / échec) pour chaque utilisateur
-#### a. Sauvegarde du résultat dans une DataFrame
+##### 2. Nombre de d'authentifications (Logon,...) avec ou sans succès (succès / échec) pour chaque utilisateur
+##### a. Sauvegarde du résultat dans une DataFrame
 ```sh
 +--------------------+-------------+-----+
 |        Utilisateurs|   Connexions|Poids|
@@ -179,12 +179,12 @@ only showing top 10 rows
 +--------------------+-------------+-----+
 only showing top 10 rows
 ```
-#### b. Dataframe contenant les utilisateurs (utilisateur_source@domaine) et les pairs (Logon,...) avec ou sans succès (succès / échec)
+###### b. Dataframe contenant les utilisateurs (utilisateur_source@domaine) et les pairs (Logon,...) avec ou sans succès (succès / échec)
 ```sh
 
 ```
-### 3. calculons le nombre de d'utilisateurs (utilisateur_source@domaine) avec ou sans succès (succès / échec) pour chaque machine source (ordinateur_source)
-#### Sauvegarde du résultat dans une DataFrame
+##### 3. calculons le nombre de d'utilisateurs (utilisateur_source@domaine) avec ou sans succès (succès / échec) pour chaque machine source (ordinateur_source)
+###### Sauvegarde du résultat dans une DataFrame
 ```sh
 +--------------------+--------------------+-----+
 |        Utilisateurs|          Connexions|Poids|
@@ -202,7 +202,7 @@ only showing top 10 rows
 +--------------------+--------------------+-----+
 only showing top 10 rows
 ```
-#### Dataframe contenant les utilisateurs (utilisateur_source@domaine) et les pairs (ordinateur_source, ordinateur_destination)
+###### Dataframe contenant les utilisateurs (utilisateur_source@domaine) et les pairs (ordinateur_source, ordinateur_destination)
 ```sh
 +--------------------------+
 |Utilisateurs et connexions|
