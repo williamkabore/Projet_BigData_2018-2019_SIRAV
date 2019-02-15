@@ -30,14 +30,15 @@ public class partie2 {
 	}
 	/*La fonction ColUnion, utilise la methode Union pour fusioner les deux colones du dataset précédent.
 	*/
-	  public static Dataset<Row> ColUnion (Dataset<Row> ds, String col1, String col2, String name) {
-	  Dataset<Row> Union = ds.select(col1)
+	public static Dataset<Row> ColUnion (Dataset<Row> ds, String col1, String col2, String name) {
+	    Dataset<Row> Union = ds.select(col1)
 	 /*On limite la selection à 10 lignes pour la premiere colonne puis dans le main on affiche les 20 premieres lignes
 	  pour permettre d'afficher de bien constater la fusion des deux colonnes*/   					 
 	    					 .limit(10)
-				  		 .union(ds.select(col2)).distinct()
-				  		 .toDF(name);
-	   return Union;
-	   }
+				  			 .union(ds.select(col2).limit(10)).distinct()
+				  			 .toDF(name);
+		return Union;
+
+	}
 	
 }

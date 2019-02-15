@@ -1,8 +1,4 @@
-/*
-* La classe Partie contient des fonctions permettant de traiter les questions relatives à la partie 1 du projet.
-*
-*/
-
+// La classe Partie contient des fonctions permettant de traiter les questions relatives à la partie 1 du projet.
 
 package com.bigdata.projet;
 
