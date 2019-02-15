@@ -258,6 +258,15 @@ only showing top 10 rows
 +--------------------------+
 ```
 ## Partie III
+Pour cette partie, les résultats seront sauvegardés dans des répertoires output comme on peut le voir sur la capture ci-dessous :
+![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Output.PNG)
+
+A l'intérieur de ces répertoires, nous avons les différents fichiers JSON :
+![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/fichiers%20JSON.PNG)
+
+Les résultats sont contenus dans ces fichiers JSON :
+![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Contenu%20JSON.PNG)
+
 ```sh
 
 ```
