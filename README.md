@@ -245,7 +245,7 @@ Pour cette partie, les résultats seront sauvegardés dans un répertoire output
 		}
 	}
 ```
-Comme on peut observer le contenu de ce répertoire sur la capture ci-dessous :
+On peut observer le contenu de ce répertoire sur la capture ci-dessous :
 
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Output.PNG)
 
@@ -286,12 +286,12 @@ Pour cette partie, nous avons également utilisé une méthode qui fait le trait
 	}
 ```
 
-le contenu de ce répertoire sur la capture ci-dessous :
+On peut voir le contenu de ce répertoire sur la capture ci-dessous :
 
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Output2.PNG)
 
 
-Le contenu de ces fichiers JSON est le suivant  :
+Le contenu de des fichiers JSON est le suivant  :
 
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/contenu%20JSON2.PNG)
 
