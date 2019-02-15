@@ -330,4 +330,9 @@ Les résultats contenus dans ces fichiers JSON :
 
 ## Exécution avec spark-submit
 
+Après avoir exporté le JAR de notre application, nous l'avons testé avec spark-submit. Avant, nous avons modifié notre code afin de permettre de spécifier le répertoire output pour les parties 3 et 4. Il faut également spécifier le chemin vers le main. Ainsi la commande pour exécuter notre application est la suivante :
+```sh
+/bin/spark-submit --class com.bigdata.projet.main application.jar path\output
+```
+Le résultat est le suivant :
 ![alt text](https://github.com/AzizGS/BigData/blob/master/Capture.PNG)
