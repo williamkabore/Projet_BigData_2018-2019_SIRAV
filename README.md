@@ -160,7 +160,7 @@ only showing top 10 rows
 +--------------------------+
 ```
 ##### 2. Nombre de d'authentifications (Logon,...) avec ou sans succès (succès / échec) pour chaque utilisateur
-##### a. Sauvegarde du résultat dans une DataFrame
+###### a. Sauvegarde du résultat dans une DataFrame
 ```sh
 +--------------------+-------------+-----+
 |        Utilisateurs|   Connexions|Poids|
@@ -183,7 +183,7 @@ only showing top 10 rows
 
 ```
 ##### 3. calculons le nombre de d'utilisateurs (utilisateur_source@domaine) avec ou sans succès (succès / échec) pour chaque machine source (ordinateur_source)
-###### Sauvegarde du résultat dans une DataFrame
+###### a. Sauvegarde du résultat dans une DataFrame
 ```sh
 +--------------------+--------------------+-----+
 |        Utilisateurs|          Connexions|Poids|
@@ -201,7 +201,7 @@ only showing top 10 rows
 +--------------------+--------------------+-----+
 only showing top 10 rows
 ```
-###### Dataframe contenant les utilisateurs (utilisateur_source@domaine) et les pairs (ordinateur_source, ordinateur_destination)
+###### b. Dataframe contenant les utilisateurs (utilisateur_source@domaine) et les pairs (ordinateur_source, ordinateur_destination)
 ```sh
 +--------------------------+
 |Utilisateurs et connexions|
@@ -258,6 +258,18 @@ only showing top 10 rows
 +--------------------------+
 ```
 ## Partie III
+Pour cette partie, les résultats seront sauvegardés dans des répertoires output comme on peut le voir sur la capture ci-dessous :
+
+![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Output.PNG)
+
+A l'intérieur de ces répertoires, nous avons les différents fichiers JSON :
+
+![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/fichiers%20JSON.PNG)
+
+Les résultats sont contenus dans ces fichiers JSON :
+
+![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Contenu%20JSON.PNG)
+
 ```sh
 
 ```
