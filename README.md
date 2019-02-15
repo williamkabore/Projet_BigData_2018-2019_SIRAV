@@ -1,11 +1,11 @@
 #### Auteurs : Aziz BEKKI et William KABORE
 # Projet Big Data 2018-2019-Master : SIRAV
 ## Partie I
-##### 1. Lecture du fichier logs.
+### 1. Lecture du fichier logs.
 ```sh
 Dataset<Row> ds = partie1.readfile ("auth_500000.txt",spark);
 ```
-La méthode readfile est definie comme suit:
+La fonction méthode est definie comme suit:
 ```sh
 	public static Dataset<Row> readfile(String File_name, SparkSession spark) {
 		Dataset<Row> dataset = spark.read()
@@ -17,7 +17,7 @@ La méthode readfile est definie comme suit:
 					     "type de connexion","orientation d'authentification","succès / échec");
 		return dataset;
 ```
-##### 2. Suppression des lignes de logs qui contiennent le symbole ' ?'.
+###### 2. Suppression des lignes de logs qui contiennent le symbole ' ?'.
 ```sh
 +-----+--------------------------+-------------------------------+-----------------+----------------------+---------------------+-----------------+------------------------------+--------------+
 |temps|utilisateur_source@domaine|utilisateur_destination@domaine|ordinateur_source|ordinateur_destination|type d'authentication|type de connexion|orientation d'authentification|succès / échec|
@@ -95,9 +95,9 @@ only showing top 10 rows
 ##### 1. Nombre de connexions effectuées sur une machine source (ordinateur_source) vers une machine destination (ordinateur_destination) pour chaque utilisateur (utilisateur_source@domaine).
 ###### a. Sauvegarde du résultat dans une DataFrame
 ```sh
-+--------------------------+-----------+-----+
-|utilisateur_source@domaine|  Connexion|count|
-+--------------------------+-----------+-----+
++--------------------+-----------------+-----+
+|              Utilisateurs| Connexions|Poids|
++--------------------+-------------+---------+
 |                C585$@DOM1|  C585,C586| 3376|
 |                C743$@DOM1|  C743,C586| 2898|
 |                C480$@DOM1|  C480,C625| 1670|
@@ -260,7 +260,29 @@ only showing top 10 rows
 +--------------------------+
 ```
 ## Partie III
-Pour cette partie, les résultats seront sauvegardés dans des répertoires output comme on peut le voir sur la capture ci-dessous :
+Pour cette partie, les résultats seront sauvegardés dans des répertoires output :
+```sh
+	public static void GroupConnex (Dataset<Row> ds,String Connex, String outputdir) {
+		Dataset<Row> Grouped = null;
+		int max=ds.schema().length();
+		String [] column = ds.columns();
+		System.out.println(ds.col("temps"));
+		for (i=1; i<max ; i++) {
+			for (j=1; j<max ; j++) {
+				if (i!=j)
+					for (k=j+1; k<max; k++) {
+						if(k!=i && k!=j)
+							System.out.println("pair ==> : (" +Integer.toString(i)+" "+"("+Integer.toString(j)+Integer.toString(k)+"))" );
+						Grouped=ds.withColumn(Connex, concat(ds.col(column[j]),
+								lit(","), ds.col(column[k])))
+								.groupBy(column[i],Connex).count()
+								.orderBy(org.apache.spark.sql.functions.col("count").desc());
+						Grouped.write().json(outputdir+Integer.toString(i)+Integer.toString(j)+Integer.toString(k));                             }
+			}
+		}
+	}
+```
+comme on peut le voir sur la capture ci-dessous :
 
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Output.PNG)
 
@@ -272,12 +294,34 @@ Les résultats sont contenus dans ces fichiers JSON :
 
 ![alt text](https://github.com/williamkabore/Projet_BigData_2018-2019_SIRAV/blob/master/Captures/Contenu%20JSON.PNG)
 
-```sh
-
-```
 ## Partie IV
+Pour cette partie, nous avons également utilisé une méthode qui fait le traitement et sauvegarde les fichiers JSON dans un répertoire outptdir:
 ```sh
+	public static void TempWindow (Dataset<Row> ds,String Connex, String outputdir) {
+		Dataset<Row> Grouped = null;
+		int max=ds.schema().length();
+		String [] column = ds.columns();
 
+		Dataset<Row> temps =ds.filter(column[0]+" <= "+ft+" AND "+column[0]+">0");
+		while (temps.count()!=0){
+
+			for (i=1; i<max ; i++) {
+				for (j=1; j<max ; j++) {
+					if (i!=j)
+						for (k=j+1; k<max; k++) {
+							if(k!=i && k!=j)
+								Grouped=ds.withColumn(Connex, concat(ds.col(column[j]),
+										lit(","), ds.col(column[k])))
+								.groupBy(column[i],Connex).count()
+								.orderBy(org.apache.spark.sql.functions.col("count").desc());
+							Grouped.write().json(outputdir+Integer.toString(ft)+Integer.toString(i)+Integer.toString(j)+Integer.toString(k));
+						}
+				}
+			}
+			ft+=60;
+		}
+	}
 ```
+## Exécution avec spark-submit
 
 ![alt text](https://github.com/AzizGS/BigData/blob/master/Capture.PNG)
