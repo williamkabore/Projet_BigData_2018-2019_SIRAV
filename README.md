@@ -96,6 +96,8 @@ only showing top 10 rows
 ###### a. Sauvegarde du résultat dans une DataFrame
 ```sh
 +--------------------------+-----------+-----+
+|utilisateur_source@domaine|  Connexion|count|
++--------------------------+-----------+-----+
 |                C585$@DOM1|  C585,C586| 3376|
 |                C743$@DOM1|  C743,C586| 2898|
 |                C480$@DOM1|  C480,C625| 1670|
