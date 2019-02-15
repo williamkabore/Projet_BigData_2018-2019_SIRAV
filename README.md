@@ -1,4 +1,4 @@
-#### Auteurs : Aziz BEKKI et William KABORE
+#### Réalisé par : Aziz BEKKI et William KABORE
 # Projet Big Data 2018-2019-Master : SIRAV
 ## Partie I
 ##### 1. Lecture du fichier logs.
