@@ -182,7 +182,22 @@ only showing top 10 rows
 ```
 ###### b. Dataframe contenant les utilisateurs (utilisateur_source@domaine) et les pairs (Logon,...) avec ou sans succès (succès / échec)
 ```sh
-
++--------------------------+
+|Utilisateurs et connexions|
++--------------------------+
+|                LogOn,Fail|
+|                C567$@DOM1|
+|                C743$@DOM1|
+|             LogOn,Success|
+|                  U66@DOM1|
+|                C585$@DOM1|
+|                C104$@DOM1|
+|                C599$@DOM1|
+|               C1114$@DOM1|
+|                  U22@DOM1|
+|                C123$@DOM1|
+|      ANONYMOUS LOGON@C586|
++--------------------------+
 ```
 ##### 3. calculons le nombre de d'utilisateurs (utilisateur_source@domaine) avec ou sans succès (succès / échec) pour chaque machine source (ordinateur_source)
 ###### a. Sauvegarde du résultat dans une DataFrame
